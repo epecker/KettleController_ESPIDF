@@ -1,5 +1,12 @@
 # Electric Kettle DEVS model
 
+This model executes the temperature controller for an electric kettle. We use the DS18B20 temperature probe to measure the temperature and three outputs for a green led (temperature OK), red led (temperature out of bounds) and relay. This model is intended to run on an ESP32 board, where:
+
+* DS18B20: pin 4 (G4)
+* Red LED: pi 16 (G16)
+* Green LED: pin 15 (G15)
+* Relay: pin 17 (G17)
+
 This model is based on Cadmium\_v2 version modified by Sasisekhar [here](https://github.com/Sasisekhar/RT-CADMIUM_ESP32) and the Blinky led basic example [here](https://github.com/Sasisekhar/Blinky-ESPIDF).
 
 Under the folder `components/` you will find:
