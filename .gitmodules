@@ -1,0 +1,9 @@
+[submodule "components/RT-CADMIUM_ESP32"]
+	path = components/cadmium_v2
+	url = https://github.com/Sasisekhar/RT-CADMIUM_ESP32
+[submodule "components/esp32-ds18b20"]
+	path = components/esp32-ds18b20
+	url = https://github.com/DavidAntliff/esp32-ds18b20
+[submodule "components/esp32-owb"]
+	path = components/esp32-owb
+	url = https://github.com/DavidAntliff/esp32-owb
