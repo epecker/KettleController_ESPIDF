@@ -16,7 +16,10 @@ Under the folder `components/` you will find:
 │   └── esp32-owb/
 └── README.md                  This is the file you are currently reading
 ```
+
 Subfolders `cadmium_v2/`, `esp32-ds18b20/` and `esp32-owb` are treated as git submodules. As for the `boost_1_79_0/` you must download it and decompress from: https://boostorg.jfrog.io/artifactory/main/release/1.79.0/source/boost_1_79_0.tar.gz.
+
+In file: `components/cadmium_v2/include/cadmium/core/real_time/rt_clock.hpp` the macro `MISSED_DEADLINE_TOLERANCE` must be changed to `-1` to avoid checking the slid of real time.
 
 ## ESP-32 Toolchain
 
