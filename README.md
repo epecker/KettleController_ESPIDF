@@ -3,7 +3,7 @@
 This model executes the temperature controller for an electric kettle. We use the DS18B20 temperature probe to measure the temperature and three outputs for a green led (temperature OK), red led (temperature out of bounds) and relay. This model is intended to run on an ESP32 board, where:
 
 * DS18B20: pin 4 (G4)
-* Red LED: pi 16 (G16)
+* Red LED: pin 16 (G16)
 * Green LED: pin 15 (G15)
 * Relay: pin 17 (G17)
 
@@ -27,6 +27,13 @@ Under the folder `components/` you will find:
 Subfolders `cadmium_v2/`, `esp32-ds18b20/` and `esp32-owb` are treated as git submodules. As for the `boost_1_79_0/` you must download it and decompress from: https://boostorg.jfrog.io/artifactory/main/release/1.79.0/source/boost_1_79_0.tar.gz.
 
 In file: `components/cadmium_v2/include/cadmium/core/real_time/rt_clock.hpp` the macro `MISSED_DEADLINE_TOLERANCE` must be changed to `-1` to avoid checking the slid of real time.
+
+## Git
+
+Follow these steps:
+1. git clone git@github.com:epecker/KettleController_ESPIDF.git
+2. cd KettleController_ESPIDF
+3. git submodule update --init --recursive
 
 ## ESP-32 Toolchain
 
