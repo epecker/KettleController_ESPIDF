@@ -17,6 +17,7 @@ extern "C" {
 		std::shared_ptr<blinkySystem> model = std::make_shared<blinkySystem> ("blinkySystem");
 		auto rootCoordinator = cadmium::RootCoordinator(model);
 		ESP_LOGI("APP MAIN", "Created System");
+		esp_log_level_set("*", ESP_LOG_INFO); // this should be done in the top
 
 		#ifndef NO_LOGGING
 			auto logger = std::make_shared<cadmium::RTLogger>(";");
@@ -25,8 +26,8 @@ extern "C" {
 		#endif
 
 		rootCoordinator.start();
-	// 	rootCoordinator.simulate(std::numeric_limits<double>::infinity());
-		rootCoordinator.simulate(1000000.0);
+		rootCoordinator.simulate(std::numeric_limits<double>::infinity());
+	//	rootCoordinator.simulate(1000000.0);
 		rootCoordinator.stop();
 	}
 }

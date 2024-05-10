@@ -61,7 +61,7 @@ namespace cadmium::blinkySystem {
 			float Tmax;
 
 			// default constructor
-			DiscController(const std::string& id): Atomic<DiscControllerState>(id, DiscControllerState())  {
+			DiscController(const std::string& id, float _Tmax=85.0, float _Tmin=75.0): Atomic<DiscControllerState>(id, DiscControllerState())  {
 			
 				ESP_LOGI("DiscController Atomic", "Initialization");
 			
@@ -72,8 +72,8 @@ namespace cadmium::blinkySystem {
 			
 				pollingRate = 5; // 5 sec 
 				// TODO: declare Tmin and Tmax as parameters received from the Top Coupling
-				Tmin = 35.0; // C degrees
-				Tmax = 45.0; // C degrees
+				Tmin = _Tmin; // 75.0; // C degrees
+				Tmax = _Tmax; // 85.0; // C degrees
 
 				state.ctrl_state = 0;
 				state.temperature = 0.0;

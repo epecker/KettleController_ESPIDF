@@ -7,6 +7,11 @@ This model executes the temperature controller for an electric kettle. We use th
 * Green LED: pin 15 (G15)
 * Relay: pin 17 (G17)
 
+* DS18B20: pin 7 (G4)
+* Red LED: pi 16 (G16)
+* Green LED: pin 4 (G15)
+* Relay: pin 9 (G17)
+
 This model is based on Cadmium\_v2 version modified by Sasisekhar [here](https://github.com/Sasisekhar/RT-CADMIUM_ESP32) and the Blinky led basic example [here](https://github.com/Sasisekhar/Blinky-ESPIDF).
 
 Under the folder `components/` you will find:
@@ -60,7 +65,7 @@ alias get_idf='. $HOME/<path-to-esp-folder>/esp/esp-idf/export.sh'
 where `<path-to-esp-folder>` must be replaced by the correct path.
 6. Then, to make sure that the environmental variables are correctly defined after launching a new terminal just run either:
 ```bash
-get-idf
+get_idf
 ```
 
 7. To build the model run:

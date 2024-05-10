@@ -28,7 +28,7 @@ namespace cadmium::blinkySystem {
 			auto redLedOutput  = addComponent<DigitalOutput>("redLed", 16);
 			auto releOutput  = addComponent<DigitalOutput>("rele", 17);
 			auto ds18b20        = addComponent<DS18B20>("tempSensor");
-			auto tempController = addComponent<DiscController>("tempController");
+			auto tempController = addComponent<DiscController>("tempController",85.0,75.0);
 			addCoupling(ds18b20->out, tempController->temp_in);
 			addCoupling(tempController->green_led_out, greenLedOutput->in);
 			addCoupling(tempController->red_led_out, redLedOutput->in);
